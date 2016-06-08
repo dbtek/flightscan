@@ -49,7 +49,7 @@ export default (props) => {
         })()}
 
         <label>Passengers</label>
-        <input type="number" value={props.passengers} onChange={handleChange('passengers')}/>
+        <input type="number" value={props.passengers} onChange={handleChange('passengers')} min={1}/>
 
         <Button block primary raised onClick={props.onSearch}>Search</Button>
       </form>
