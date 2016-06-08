@@ -1,0 +1,12 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+
+  .tab {
+    border-radius: 0;
+
+    &.active {
+      border-bottom: 4px solid $color-accent;
+    }
+  }
+}

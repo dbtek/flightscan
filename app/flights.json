@@ -1,0 +1,79 @@
+[{
+  "from": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "to": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "code": "TY-4211",
+  "departure": "Mon Jun 07 2016 12:40:20 GMT+0300 (EEST)",
+  "arrival": "Mon Jun 07 2016 13:50:20 GMT+0300 (EEST)",
+  "price": 120
+}, {
+  "from": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "to": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "code": "TY-2312",
+  "departure": "Mon Jun 07 2016 22:40:20 GMT+0300 (EEST)",
+  "arrival": "Mon Jun 07 2016 23:50:20 GMT+0300 (EEST)",
+  "price": 140
+}, {
+  "from": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "to": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "code": "TY-4209",
+  "departure": "Sun Jun 05 2016 11:40:20 GMT+0300 (EEST)",
+  "arrival": "Sun Jun 05 2016 12:50:20 GMT+0300 (EEST)",
+  "price": 120
+}, {
+  "from": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "to": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "code": "TY-2310",
+  "departure": "Sun Jun 05 2016 21:40:20 GMT+0300 (EEST)",
+  "arrival": "Sun Jun 05 2016 22:50:20 GMT+0300 (EEST)",
+  "price": 140
+}, {
+  "from": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "to": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "code": "TY-4212",
+  "departure": "Wed Jun 08 2016 22:40:20 GMT+0300 (EEST)",
+  "arrival": "Wed Jun 08 2016 23:50:20 GMT+0300 (EEST)",
+  "price": 120
+}, {
+  "from": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "to": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "code": "TY-2313",
+  "departure": "Wed Jun 08 2016 22:40:20 GMT+0300 (EEST)",
+  "arrival": "Wed Jun 08 2016 23:50:20 GMT+0300 (EEST)",
+  "price": 140
+}]

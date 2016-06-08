@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  label, input, select {
+    flex: 1;
+    margin-top: .6em;
+  }
+
+  label {
+    color: $color-gray;
+    margin-top: 1em;
+  }
+
+  select, input {
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+    font-size: 1.15em;
+    padding: .2em;
+    font-family: roboto;
+  }
+
+  >div {
+    margin-top: 1em;
+  }
+
+  .button {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+}

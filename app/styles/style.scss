@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'paper';
+@import 'card';
+@import 'tabs';
+@import 'button';
+@import 'header';
+@import 'form';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.filters {
+  flex: 1;
+  padding: 10px;
+  margin-right: 15px;
+}
+.flights {
+  flex: 4;
+}
+
+.flight {
+  display: flex;
+  .flight-details {
+    flex: 2;
+  }
+  &.return .flight-details {
+    flex: 1;
+  }
+  .times {
+    color: darken($color-gray, 10%);
+  }
+  .actions, .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .price {
+    flex: .3;
+    font-size: 2em;
+  }
+  .actions {
+    flex: .5;
+    align-items: flex-end;
+  }
+}
+
+.flight-details {
+  div {
+    margin: 5px 0;
+  }
+  .code {
+    color: $color-gray;
+  }
+  .route {
+    font-size: 1.2em;
+  }
+}
