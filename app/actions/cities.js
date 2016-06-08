@@ -1,3 +1,7 @@
+/**
+ * Action creators to fetch cities.
+ */
+
 import {
   FETCH_CITIES
 } from './types';

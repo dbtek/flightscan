@@ -1,3 +1,7 @@
+/**
+ * Action creators to set filters.
+ */
+
 import {
   UPDATE_FROM,
   UPDATE_TO,

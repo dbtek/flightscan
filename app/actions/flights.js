@@ -1,3 +1,7 @@
+/**
+ * Action creators to fetch / search flights.
+ */
+
 import {
   SEARCH_FLIGHTS,
   FETCH_FLIGHTS
