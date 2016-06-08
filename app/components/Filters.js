@@ -26,18 +26,18 @@ export default (props) => {
           Destination
         </label>
         <Select options={props.cities} value={props.to} onChange={handleChange('to')}/>
+
+        <label>Departure Date</label>
+        <input type="date" value={props.departDate.toJSON().slice(0,10)} onChange={handleChange('departDate')}/>
+
         {(() => {
           if(props.roundTrip) {
-            return(
-              <div>
-                <label>Departure Date</label>
-                <input type="date" value={props.departDate.toJSON().slice(0,10)} onChange={handleChange('departDate')}/>
-              </div>
-            )
+            return([
+                <label>Return Date</label>,
+                <input type="date" value={props.returnDate.toJSON().slice(0,10)} onChange={handleChange('returnDate')}/>
+            ])
           }
         })()}
-        <label>Return Date</label>
-        <input type="date" value={props.returnDate.toJSON().slice(0,10)} onChange={handleChange('returnDate')}/>
 
         <label>Passengers</label>
         <input type="number" value={props.passengers} onChange={handleChange('passengers')}/>
