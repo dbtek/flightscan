@@ -1,6 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 
+/**
+ * Button component.
+ * @param  {Object} props
+ * @return {Component}
+ */
 export default (props) => {
   const className = classnames('button', {
     raised: props.raised,

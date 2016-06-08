@@ -7,6 +7,11 @@ import Tab from './Tab';
 import Select from './Select';
 import Button from './Button';
 
+/**
+ * Filters component. Renders a form of options.
+ * @param  {Object} props
+ * @return {Component}
+ */
 export default (props) => {
   function handleChange(prop) {
     return (e) => props.onChange(prop, e.target.value);

@@ -3,7 +3,7 @@ import Flight from '../components/Flight';
 import Header from './Header';
 
 /**
- * Renders flight options with or without return flight pairs.
+ * Renders a flight with or without return flight pairs.
  * @param  {Object} outFlight     Out flight.
  * @param  {Array} returnFlights  Available return flights.
  * @param  {Number} passengers    Number of passengers.

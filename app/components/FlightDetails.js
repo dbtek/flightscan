@@ -4,6 +4,11 @@ import ArrowIcon from 'react-icons/lib/md/arrow-forward';
 import TakeOffIcon from 'react-icons/lib/md/flight-takeoff';
 import LandIcon from 'react-icons/lib/md/flight-land';
 
+/**
+ * Flight details component. Renders flight code, route, time etc.
+ * @param  {Object} props
+ * @return {Component}
+ */
 export default (props) => {
   let departure = moment(new Date(props.departure));
   let arrival = moment(new Date(props.arrival));

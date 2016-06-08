@@ -9,6 +9,11 @@ import moment from 'moment';
 import FlightDetails from './FlightDetails';
 import Button from './Button';
 
+/**
+ * Flight component. Renders a single flight or a pair of out/return flights.
+ * @param  {Object} props
+ * @return {Component}
+ */
 export default (props) => {
   let departure = moment(new Date(props.departure));
   let arrival = moment(new Date(props.arrival));

@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Select component.
+ * @param  {Object} props
+ * @return {Component}
+ */
 export default (props) => (
   <select value={props.value} onChange={props.onChange}>
     {
