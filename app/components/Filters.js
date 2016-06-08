@@ -1,6 +1,5 @@
 import React from 'react';
 import FlightIcon from 'react-icons/lib/md/flight';
-import ReturnIcon from 'react-icons/lib/md/autorenew';
 
 import Tabs from './Tabs';
 import Tab from './Tab';
@@ -16,11 +15,16 @@ export default (props) => {
   function handleChange(prop) {
     return (e) => props.onChange(prop, e.target.value);
   }
+
+  let ReturnIcon = [
+      <FlightIcon/>,
+      <FlightIcon className="reverse"/>
+  ];
   return (
     <div className="filters">
       <Tabs>
         <Tab active={!props.roundTrip} label="One Way" icon={<FlightIcon/>} onClick={() => props.onChange('roundTrip', false)}/>
-        <Tab active={props.roundTrip} label="Roundtrip"  icon={<ReturnIcon/>} onClick={() => props.onChange('roundTrip', true)}/>
+        <Tab active={props.roundTrip} label="Roundtrip"  icon={ReturnIcon} onClick={() => props.onChange('roundTrip', true)}/>
       </Tabs>
       <form>
         <label>
