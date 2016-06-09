@@ -1,15 +1,14 @@
 /**
  * A resource module to simulate interaction with a REST api.
  */
-let FLIGHTS, CITIES;
+import CITIES from './cities.json';
+
+// let loading data file from env variable
+let flightsDataFile = 'flights';
 if(process && process.env.FLIGHTS_JSON)
-  FLIGHTS = require(process.env.FLIGHTS_JSON);
-else
-  FLIGHTS = require('./flights.json');
-if(process && process.env.CITIES_JSON)
-  CITIES = require(process.env.CITIES_JSON);
-else
-  CITIES = require('./cities.json');
+  flightsDataFile = process.env.FLIGHTS_JSON
+
+const FLIGHTS = require('./' + flightsDataFile + '.json');
 
 /**
  * Fetches flights.
