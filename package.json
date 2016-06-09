@@ -6,7 +6,7 @@
     "prestart": "webpack",
     "start": "webpack-dev-server",
     "build": "webpack -p --config webpack.prod.config.js",
-    "test": "FLIGHTS_JSON='./_mock-flights.json' mocha --compilers js:babel-core/register --require babel-polyfill --recursive",
+    "test": "FLIGHTS_JSON='_mock-flights' mocha --compilers js:babel-core/register --require babel-polyfill --recursive",
     "test:watch": "npm test -- --watch"
   },
   "author": "İsmail Demirbilek <demirbilek.ismail@gmail.com>",
