@@ -1,0 +1,27 @@
+[{
+  "from": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "to": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "code": "TY-4211",
+  "departure": "Mon Jun 07 2016 12:40:20 GMT+0300 (EEST)",
+  "arrival": "Mon Jun 07 2016 13:50:20 GMT+0300 (EEST)",
+  "price": 120
+}, {
+  "from": {
+    "short": "SAW",
+    "full": "Istanbul (Sabiha Gökçen Airport)"
+  },
+  "to": {
+    "short": "AYT",
+    "full": "Antalya"
+  },
+  "code": "TY-4211",
+  "departure": "Tue Jun 08 2016 12:40:20 GMT+0300 (EEST)",
+  "arrival": "Tue Jun 08 2016 13:50:20 GMT+0300 (EEST)",
+  "price": 120
+}]
