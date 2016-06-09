@@ -7,7 +7,6 @@ export default function flights(state = {
     outFlights: [],
     returnFlights: [],
     isFetching: false,
-    searchTerm: '',
     passengers: 1,
   }, action) {
 
