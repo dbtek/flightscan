@@ -4,7 +4,6 @@
 
 export const REQUEST_FLIGHTS_SEARCH       = 'REQUEST_FLIGHTS_SEARCH';
 export const SEARCH_FLIGHTS               = 'SEARCH_FLIGHTS';
-export const FETCH_FLIGHTS                = 'FETCH_FLIGHTS';
 export const REQUEST_CITIES               = 'REQUEST_CITIES';
 export const FETCH_CITIES                 = 'FETCH_CITIES';
 export const UPDATE_FROM                  = 'UPDATE_FROM';

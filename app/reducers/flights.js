@@ -1,6 +1,6 @@
 import {
-  FETCH_FLIGHTS,
   SEARCH_FLIGHTS,
+  REQUEST_FLIGHTS_SEARCH,
 } from '../actions';
 
 export default function flights(state = {
@@ -12,17 +12,16 @@ export default function flights(state = {
   }, action) {
 
   switch(action.type) {
-    case FETCH_FLIGHTS:
+    case REQUEST_FLIGHTS_SEARCH:
       return Object.assign({}, state, {
-        outFlights: action.flights,
-        returnFlights: [],
-        passengers: action.passengers,
+        isFetching: true
       });
     case SEARCH_FLIGHTS:
       return Object.assign({}, state, {
           outFlights: action.outFlights,
           returnFlights: action.returnFlights,
           passengers: action.passengers,
+          isFetching: false
         });
     default:
       return Object.assign({}, state);
