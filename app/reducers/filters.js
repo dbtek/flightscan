@@ -12,8 +12,8 @@ import {
 export default function filters(state = {
     from: 'Istanbul',
     to:   'Antalya',
-    departDate: new Date(),
-    returnDate: new Date(),
+    departDate: new Date('2016-06-05'),
+    returnDate: new Date('2016-06-08'),
     roundTrip: true,
     passengers: 1
   }, action) {
