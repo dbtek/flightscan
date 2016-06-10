@@ -15,23 +15,25 @@ import Button from './Button';
  * @return {Component}
  */
 export default (props) => {
-  let departure = moment(new Date(props.departure));
-  let arrival = moment(new Date(props.arrival));
-
-
-  if(props.return)
-    return (
-      <Card className="flight return">
-        <FlightDetails {...props.out}/>
-        <FlightDetails {...props.return}/>
-        <div className="price">
-          <span>£{(props.out.price + props.return.price) * (props.passengers || 1)}</span>
-        </div>
-        <div className="actions">
-          <Button success={true}><FlightIcon/> Select this flight</Button>
-        </div>
-      </Card>
-    );
+  if(props.return) {
+    const outDeparture = new Date(props.out.departure);
+    const returnDeparture = new Date(props.return.departure);
+    // check return departure time for the sake of the trip
+    if(returnDeparture > outDeparture)
+      return (
+        <Card className="flight return">
+          <FlightDetails {...props.out}/>
+          <FlightDetails {...props.return}/>
+          <div className="price">
+            <span>£{(props.out.price + props.return.price) * (props.passengers || 1)}</span>
+          </div>
+          <div className="actions">
+            <Button success={true}><FlightIcon/> Select this flight</Button>
+          </div>
+        </Card>
+      );
+    return <span/>;
+  }
   else
     return (
       <Card className="flight">

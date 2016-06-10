@@ -11,14 +11,7 @@ import Header from './Header';
  */
 function renderFlight(outFlight, returnFlights, passengers) {
   if(returnFlights)
-     return returnFlights.map(returnFlight => {
-        // check return departure time for the sake of the trip
-        if(returnFlight.departure > outFlight.departure)
-          return (
-            <Flight out={outFlight} return={returnFlight} passengers={passengers}/>
-          );
-        return;
-      });
+     return returnFlights.map(returnFlight => (<Flight out={outFlight} return={returnFlight} passengers={passengers}/>));
   else
     return <Flight out={outFlight} passengers={passengers}/>;
 }
