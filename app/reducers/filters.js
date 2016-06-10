@@ -8,12 +8,12 @@ import {
   UPDATE_FILTERS,
 } from '../actions';
 
-
+const now = new Date();
 export default function filters(state = {
     from: 'Istanbul',
     to:   'Antalya',
-    departDate: new Date('2016-06-05'),
-    returnDate: new Date('2016-06-08'),
+    departDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
+    returnDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
     roundTrip: true,
     passengers: 1
   }, action) {

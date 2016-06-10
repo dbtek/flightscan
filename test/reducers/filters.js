@@ -2,13 +2,15 @@ import expect from 'expect';
 import reducer from '../../app/reducers/filters';
 import * as types from '../../app/actions/types';
 
+let now = new Date();
+
 describe('Filters reducer', () => {
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
       from: 'Istanbul',
       to:   'Antalya',
-      departDate: new Date('2016-06-05'),
-      returnDate: new Date('2016-06-08'),
+      departDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
+      returnDate: new Date(now.getFullYear(), now.getMonth(), now.getDate()+1),
       roundTrip: true,
       passengers: 1
     });
