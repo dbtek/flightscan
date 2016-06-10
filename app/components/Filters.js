@@ -17,8 +17,8 @@ export default (props) => {
   }
 
   let ReturnIcon = [
-      <FlightIcon/>,
-      <FlightIcon className="reverse"/>
+      <FlightIcon key={1}/>,
+      <FlightIcon key={2} className="reverse"/>
   ];
   return (
     <div className="filters">
@@ -42,8 +42,8 @@ export default (props) => {
         {(() => {
           if(props.roundTrip) {
             return([
-                <label>Return Date</label>,
-                <input type="date" value={props.returnDate.toJSON().slice(0,10)} onChange={handleChange('returnDate')}/>
+                <label key={1}>Return Date</label>,
+                <input key={2} type="date" value={props.returnDate.toJSON().slice(0,10)} onChange={handleChange('returnDate')}/>
             ])
           }
         })()}

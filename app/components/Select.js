@@ -10,8 +10,8 @@ export default (props) => (
     {
       props.options && props.options.map(option => {
         if(option && option.hasOwnProperty('value'))
-          return <option value={option.value}>{option.label}</option>
-        return <option value={option}>{option}</option>
+          return <option key={option.value} value={option.value}>{option.label}</option>
+        return <option key={option} value={option}>{option}</option>
       })
     }
   </select>
