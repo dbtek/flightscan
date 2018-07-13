@@ -1,6 +1,6 @@
 import expect from 'expect';
-import reducer from '../../app/reducers/flights';
-import * as types from '../../app/actions/types';
+import reducer from '../../src/reducers/flights';
+import * as types from '../../src/actions/types';
 
 describe('Flights reducer', () => {
   it('should return the initial state', () => {

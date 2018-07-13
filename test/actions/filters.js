@@ -1,12 +1,6 @@
 import expect from 'expect';
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import * as actions from '../../app/actions/filters';
-import * as types from '../../app/actions/types';
-import cities from '../../app/cities.json';
-
-const middlewares = [ thunk ];
-const mockStore = configureMockStore(middlewares);
+import * as actions from '../../src/actions/filters';
+import * as types from '../../src/actions/types';
 
 describe('Filters actions', () => {
   it('creates UPDATE_FROM typed action', () => {

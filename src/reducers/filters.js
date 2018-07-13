@@ -5,7 +5,6 @@ import {
   UPDATE_RETURN_DATE,
   UPDATE_ROUND_TRIP,
   UPDATE_PASSENGERS,
-  UPDATE_FILTERS,
 } from '../actions';
 
 const now = new Date();
@@ -19,8 +18,6 @@ export default function filters(state = {
   }, action) {
 
   switch(action.type) {
-    case UPDATE_FILTERS:
-      return Object.assign({}, state, action.filters);
     case UPDATE_ROUND_TRIP:
       return Object.assign({}, state, {
           roundTrip: action.roundTrip

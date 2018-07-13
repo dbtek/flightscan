@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import {
@@ -27,7 +28,7 @@ export class FiltersContainer extends Component {
     cities:  PropTypes.array.isRequired,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchCities());
   }
@@ -53,6 +54,8 @@ export class FiltersContainer extends Component {
         return dispatch(updateReturnDate(val));
       case 'passengers':
         return dispatch(updatePassengers(val));
+      default:
+        return
     }
   }
 

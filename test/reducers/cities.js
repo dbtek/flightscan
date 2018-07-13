@@ -1,6 +1,6 @@
 import expect from 'expect';
-import reducer from '../../app/reducers/cities';
-import * as types from '../../app/actions/types';
+import reducer from '../../src/reducers/cities';
+import * as types from '../../src/actions/types';
 
 describe('Cities reducer', () => {
   it('should return the initial state', () => {

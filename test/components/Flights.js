@@ -1,14 +1,13 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
-import moment from 'moment';
+import TestUtils from 'react-dom/test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
+import Button from '../../src/components/Button';
+import Card from '../../src/components/Card';
+import FlightDetails from '../../src/components/FlightDetails';
+import Flight from '../../src/components/Flight';
 
-import Button from '../../app/components/Button';
-import Card from '../../app/components/Card';
-import FlightDetails from '../../app/components/FlightDetails';
-import Flight from '../../app/components/Flight';
-
-import mockFlights from '../../app/_mock-flights.json';
+import mockFlights from '../../src/flights_mock.json';
 
 function setup() {
   let props = {
@@ -17,7 +16,7 @@ function setup() {
     passengers: 2
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<Flight {...props} />);
   let output = renderer.getRenderOutput();
 

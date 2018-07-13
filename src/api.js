@@ -2,13 +2,8 @@
  * A resource module to simulate interaction with a REST api.
  */
 import CITIES from './cities.json';
-
-// let loading data file from env variable
-let flightsDataFile = 'flights';
-if(process && process.env.FLIGHTS_JSON)
-  flightsDataFile = process.env.FLIGHTS_JSON
-
-const FLIGHTS = require('./' + flightsDataFile + '.json');
+import FLIGHTS from './flights.json';
+import MOCK_FLIGHTS from './flights_mock.json';
 
 /**
  * Fetches flights.
@@ -16,6 +11,10 @@ const FLIGHTS = require('./' + flightsDataFile + '.json');
  */
 export async function getFlights() {
   const results = await new Promise(resolve => setTimeout(() => {
+    if (process.env.TEST) {
+      resolve(MOCK_FLIGHTS);
+      return;
+    }
     resolve(FLIGHTS);
   }, 1));
   return results;

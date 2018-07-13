@@ -1,8 +1,7 @@
 import expect from 'expect'
 import React from 'react'
-import TestUtils from 'react-addons-test-utils'
-
-import Header from '../../app/components/Header'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import Header from '../../src/components/Header'
 
 function setup() {
   let props = {
@@ -10,7 +9,7 @@ function setup() {
     onClick: expect.createSpy()
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<Header {...props}>Test Header</Header>);
   let output = renderer.getRenderOutput();
 

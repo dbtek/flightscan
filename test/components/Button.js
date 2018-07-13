@@ -1,8 +1,7 @@
 import expect from 'expect'
 import React from 'react'
-import TestUtils from 'react-addons-test-utils'
-
-import Button from '../../app/components/Button'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import Button from '../../src/components/Button'
 
 function setup() {
   let props = {
@@ -15,7 +14,7 @@ function setup() {
     onClick: expect.createSpy()
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<Button {...props}>Test Button</Button>);
   let output = renderer.getRenderOutput();
 

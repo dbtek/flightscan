@@ -1,0 +1,126 @@
+.paper, .card, .button.primary.raised, .button.warn.raised, .button.success.raised, .button.danger.raised {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; }
+
+.card {
+  background: #fff;
+  color: #444;
+  padding: 1em; }
+
+.tabs {
+  display: flex;
+  flex-direction: row; }
+  .tabs .tab {
+    border-radius: 0; }
+    .tabs .tab.active {
+      border-bottom: 4px solid #E91E63; }
+
+.button {
+  padding: .7em;
+  border-radius: 5px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: bold;
+  color: #2196F3;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #eee; }
+  .button.primary {
+    color: #2196F3; }
+    .button.primary.raised {
+      background-color: #2196F3;
+      color: #fff; }
+  .button.warn {
+    color: #ffc600; }
+    .button.warn.raised {
+      background-color: #ffc600;
+      color: #fff; }
+  .button.success {
+    color: #4CAF50; }
+    .button.success.raised {
+      background-color: #4CAF50;
+      color: #fff; }
+  .button.danger {
+    color: #ff5a00; }
+    .button.danger.raised {
+      background-color: #ff5a00;
+      color: #fff; }
+  .button.block {
+    display: block;
+    flex: 1;
+    text-align: center;
+    margin: .8em 0; }
+
+.header {
+  color: rgba(0, 0, 0, 0.541176);
+  font-size: .9em;
+  font-weight: 500;
+  line-height: 3em;
+  padding-left: .9em; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+  form label, form input, form select {
+    flex: 1;
+    margin-top: .6em; }
+  form label {
+    color: #8f8f8f;
+    margin-top: 1em; }
+  form select, form input {
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+    font-size: 1.15em;
+    padding: .2em;
+    font-family: roboto; }
+  form .button {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.reverse {
+  transform: rotate(180deg); }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex; }
+
+.filters {
+  flex: 1;
+  padding: 10px;
+  margin-right: 15px; }
+
+.flights {
+  flex: 4; }
+
+.flight {
+  display: flex; }
+  .flight .flight-details {
+    flex: 2; }
+  .flight.return .flight-details {
+    flex: 1; }
+  .flight .times {
+    color: #767676; }
+  .flight .actions, .flight .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .flight .price {
+    flex: .3;
+    font-size: 2em; }
+  .flight .actions {
+    flex: .5;
+    align-items: flex-end; }
+
+.flight-details div {
+  margin: 5px 0; }
+
+.flight-details .code {
+  color: #8f8f8f; }
+
+.flight-details .route {
+  font-size: 1.2em; }

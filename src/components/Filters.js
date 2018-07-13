@@ -1,6 +1,5 @@
 import React from 'react';
 import FlightIcon from 'react-icons/lib/md/flight';
-
 import Tabs from './Tabs';
 import Tab from './Tab';
 import Select from './Select';

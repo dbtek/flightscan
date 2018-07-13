@@ -1,6 +1,6 @@
 import expect from 'expect';
-import reducer from '../../app/reducers/filters';
-import * as types from '../../app/actions/types';
+import reducer from '../../src/reducers/filters';
+import * as types from '../../src/actions/types';
 
 let now = new Date();
 

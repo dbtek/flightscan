@@ -1,9 +1,9 @@
 import expect from 'expect';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import * as actions from '../../app/actions/cities';
-import * as types from '../../app/actions/types';
-import cities from '../../app/cities.json';
+import * as actions from '../../src/actions/cities';
+import * as types from '../../src/actions/types';
+import cities from '../../src/cities.json';
 
 const middlewares = [ thunk ];
 const mockStore = configureMockStore(middlewares);

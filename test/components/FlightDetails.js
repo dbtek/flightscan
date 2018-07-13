@@ -1,17 +1,16 @@
 import expect from 'expect';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow'
 import moment from 'moment';
-
-import FlightDetails from '../../app/components/FlightDetails';
-import mockFlights from '../../app/_mock-flights.json';
+import FlightDetails from '../../src/components/FlightDetails';
+import mockFlights from '../../src/flights_mock.json';
 
 function setup() {
   let props = {
     ...mockFlights[0]
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<FlightDetails {...props} />);
   let output = renderer.getRenderOutput();
 

@@ -1,11 +1,6 @@
 import React from 'react';
-import Card from './Card';
-import ArrowIcon from 'react-icons/lib/md/arrow-forward';
 import FlightIcon from 'react-icons/lib/md/flight';
-import TakeOffIcon from 'react-icons/lib/md/flight-takeoff';
-import LandIcon from 'react-icons/lib/md/flight-land';
-import moment from 'moment';
-
+import Card from './Card';
 import FlightDetails from './FlightDetails';
 import Button from './Button';
 

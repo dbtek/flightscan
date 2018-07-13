@@ -1,15 +1,15 @@
-import mockFlights from '../../app/_mock-flights.json';
+import mockFlights from '../../src/flights_mock.json';
 import expect from 'expect';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import * as actions from '../../app/actions/flights';
-import * as types from '../../app/actions/types';
+import * as actions from '../../src/actions/flights';
+import * as types from '../../src/actions/types';
 
 const middlewares = [ thunk ];
 const mockStore = configureMockStore(middlewares);
 
 beforeEach(() => {
-  process.env.FLIGHTS_JSON = './_mock-flights.json';
+  process.env.FLIGHTS_JSON = './flights_mock.json';
 });
 
 describe('Flights actions', () => {

@@ -1,8 +1,7 @@
 import expect from 'expect'
 import React from 'react'
-import TestUtils from 'react-addons-test-utils'
-
-import Card from '../../app/components/Card'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import Card from '../../src/components/Card'
 
 function setup() {
   let props = {
@@ -15,7 +14,7 @@ function setup() {
     onClick: expect.createSpy()
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<Card {...props}>Test Card</Card>);
   let output = renderer.getRenderOutput();
 

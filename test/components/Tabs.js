@@ -1,15 +1,13 @@
-import expect from 'expect'
-import React from 'react'
-import TestUtils from 'react-addons-test-utils'
-
-import Tabs from '../../app/components/Tabs'
-import Button from '../../app/components/Button'
+import expect from 'expect';
+import React from 'react';
+import ShallowRenderer from 'react-test-renderer/shallow';
+import Tabs from '../../src/components/Tabs';
 
 function setup() {
   let props = {
   };
 
-  let renderer = TestUtils.createRenderer();
+  let renderer = new ShallowRenderer();
   renderer.render(<Tabs {...props}>Test tabs</Tabs>);
   let output = renderer.getRenderOutput();
 
