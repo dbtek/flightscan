@@ -35,7 +35,7 @@ Bundle for production is created under `/build` directory with:
 ```
 
 ## Data
-Fake data is produced with [JSON Generator](http://beta.json-generator.com/).
+Fake data is produced with [JSON Generator](http://json-generator.com/).
 
 - Cities data stored in a json file named `flights.json` under `/app` directory.
 - Flights data stored in a json file named `flights.json` under `/app` directory.
