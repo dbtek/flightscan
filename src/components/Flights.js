@@ -1,6 +1,19 @@
 import React from 'react';
-import Flight from '../components/Flight';
+import Flight from './Flight';
+import ReturningFlight from './FlightReturning';
 import Header from './Header';
+import Loading from './Loading';
+
+function isInPriceRange(price, low, high) {
+  if (low) {
+    if (price < low) return false
+  }
+  if (high) {
+    if (price > high) return false
+  }
+  return true
+}
+
 
 /**
  * Renders a flight with or without return flight pairs.
@@ -9,11 +22,13 @@ import Header from './Header';
  * @param  {Number} passengers    Number of passengers.
  * @return {various}              Array of React components or singular component.
  */
-function renderFlight(outFlight, returnFlights, passengers) {
+function renderFlight(outFlight, returnFlights, passengers, priceLow, priceHigh) {
   if(returnFlights)
-     return returnFlights.map(returnFlight => (<Flight out={outFlight} return={returnFlight} passengers={passengers}/>));
-  else
-    return <Flight out={outFlight} passengers={passengers}/>;
+     return returnFlights.filter(returnFlight => isInPriceRange(outFlight.price + returnFlight.price, priceLow, priceHigh))
+      .map(returnFlight => (<ReturningFlight out={outFlight} return={returnFlight} passengers={passengers} />));
+  else if (isInPriceRange(outFlight.price, priceLow, priceHigh))
+    return <Flight {...outFlight} passengers={passengers} />;
+  return null
 }
 
 /**
@@ -22,11 +37,11 @@ function renderFlight(outFlight, returnFlights, passengers) {
  * @return {Component}    React component.
  */
 export default (props) => {
-  const { outFlights, returnFlights, passengers } = props;
+  const { outFlights, returnFlights, passengers, priceLow, priceHigh, isFetching } = props;
   return (
     <div className="flights">
       <Header>Available Flights</Header>
-      { outFlights && outFlights.map(flight => renderFlight(flight, returnFlights, passengers)) }
+      {isFetching ? <Loading /> : outFlights && outFlights.map(flight => renderFlight(flight, returnFlights, passengers, priceLow, priceHigh)) }
     </div>
   );
 }

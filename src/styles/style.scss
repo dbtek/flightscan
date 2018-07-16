@@ -24,9 +24,23 @@ body {
   flex: 1;
   padding: 10px;
   margin-right: 15px;
+
+  .price {
+    display: flex;
+  }
 }
+
 .flights {
   flex: 4;
+
+  .loading {
+    text-align: center;
+    font-size: 1.4em;
+    .icon {
+      font-size: 1.6em;
+      animation:spin 1s linear infinite;
+    }
+  }
 }
 
 .flight {
@@ -66,3 +80,5 @@ body {
     font-size: 1.2em;
   }
 }
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

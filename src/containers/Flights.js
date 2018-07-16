@@ -10,6 +10,7 @@ export class FlightsContainer extends Component {
     outFlights: PropTypes.array.isRequired,
     passengers: PropTypes.number.isRequired,
     returnFlights: PropTypes.array.isRequired,
+    isFetching: PropTypes.bool.isRequired
   }
 
   render() {
@@ -23,13 +24,21 @@ function mapStateToProps(state) {
   const {
     outFlights,
     returnFlights,
-    passengers
+    passengers,
+    isFetching
   } = state.flights;
+
+  const {
+    priceLow, priceHigh
+  } = state.filters;
 
   return {
     outFlights,
     returnFlights,
-    passengers
+    passengers,
+    priceHigh,
+    priceLow,
+    isFetching
   };
 }
 
