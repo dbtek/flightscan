@@ -9,6 +9,8 @@ import {
   UPDATE_RETURN_DATE,
   UPDATE_ROUND_TRIP,
   UPDATE_PASSENGERS,
+  UPDATE_PRICE_LOW,
+  UPDATE_PRICE_HIGH
 } from './types';
 
 export function updateRoundTrip(opt) {
@@ -50,5 +52,19 @@ export function updatePassengers(opt) {
   return {
     type: UPDATE_PASSENGERS,
     passengers: opt*1
+  }
+}
+
+export function updatePriceLow(opt) {
+  return {
+    type: UPDATE_PRICE_LOW,
+    priceLow: opt
+  }
+}
+
+export function updatePriceHigh(opt) {
+  return {
+    type: UPDATE_PRICE_HIGH,
+    priceHigh: opt
   }
 }

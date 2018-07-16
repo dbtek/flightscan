@@ -11,6 +11,8 @@ import {
   updateReturnDate,
   updatePassengers,
   fetchCities,
+  updatePriceLow,
+  updatePriceHigh,
 } from '../actions';
 
 import Filters from '../components/Filters';
@@ -26,6 +28,8 @@ export class FiltersContainer extends Component {
     returnDate: PropTypes.instanceOf(Date).isRequired,
     passengers:  PropTypes.number.isRequired,
     cities:  PropTypes.array.isRequired,
+    priceLow:  PropTypes.number,
+    priceHigh:  PropTypes.number,
   }
 
   componentDidMount() {
@@ -54,6 +58,10 @@ export class FiltersContainer extends Component {
         return dispatch(updateReturnDate(val));
       case 'passengers':
         return dispatch(updatePassengers(val));
+      case 'priceLow':
+        return dispatch(updatePriceLow(val));
+      case 'priceHigh':
+        return dispatch(updatePriceHigh(val));
       default:
         return
     }
@@ -75,7 +83,9 @@ function mapStateToProps(state) {
     roundTrip,
     departDate,
     returnDate,
-    passengers
+    passengers,
+    priceHigh,
+    priceLow
   } = state.filters;
 
   const {
@@ -89,7 +99,9 @@ function mapStateToProps(state) {
     departDate,
     returnDate,
     passengers,
-    cities
+    cities,
+    priceHigh,
+    priceLow
   };
 }
 

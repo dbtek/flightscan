@@ -1,5 +1,6 @@
 import React from 'react';
 import FlightIcon from 'react-icons/lib/md/flight';
+import RemoveIcon from 'react-icons/lib/md/highlight-remove';
 import Tabs from './Tabs';
 import Tab from './Tab';
 import Select from './Select';
@@ -12,7 +13,7 @@ import Button from './Button';
  */
 export default (props) => {
   function handleChange(prop) {
-    return (e) => props.onChange(prop, e.target.value);
+    return (e) => props.onChange(prop, e.target.type === 'number' ? e.target.value * 1 : e.target.value);
   }
 
   let ReturnIcon = [
@@ -49,6 +50,16 @@ export default (props) => {
 
         <label>Passengers</label>
         <input type="number" value={props.passengers} onChange={handleChange('passengers')} min={1}/>
+
+        <label>Price</label>
+        <div className="price">
+          <input type="number" value={props.priceLow} placeholder="Low" onChange={handleChange('priceLow')} />
+          <input type="number" value={props.priceHigh} placeholder="High" onChange={handleChange('priceHigh')} />
+          <RemoveIcon onClick={e => {
+            props.onChange('priceLow', '')
+            props.onChange('priceHigh', '')
+          }}/>
+        </div>
 
         <Button block primary raised onClick={props.onSearch}>Search</Button>
       </form>

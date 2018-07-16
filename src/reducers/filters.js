@@ -5,6 +5,8 @@ import {
   UPDATE_RETURN_DATE,
   UPDATE_ROUND_TRIP,
   UPDATE_PASSENGERS,
+  UPDATE_PRICE_LOW,
+  UPDATE_PRICE_HIGH
 } from '../actions';
 
 const now = new Date();
@@ -42,6 +44,14 @@ export default function filters(state = {
       return Object.assign({}, state, {
           passengers: action.passengers
         });
+    case UPDATE_PRICE_LOW:
+      return Object.assign({}, state, {
+        priceLow: action.priceLow
+      });
+    case UPDATE_PRICE_HIGH:
+      return Object.assign({}, state, {
+        priceHigh: action.priceHigh
+      });
     default:
       return Object.assign({}, state);
   }
