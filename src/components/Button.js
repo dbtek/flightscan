@@ -17,9 +17,9 @@ export default (props) => {
   }, props.className);
 
   return (
-  <a {...props}
-    className={className}>
-    {props.children}
-  </a>
+    <a href={props.href} onClick={props.onClick}
+      className={className}>
+      {props.children}
+    </a>
   )
 }
