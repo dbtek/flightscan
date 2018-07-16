@@ -4,7 +4,7 @@
 
 import {
   SEARCH_FLIGHTS,
-  FETCH_FLIGHTS
+  REQUEST_FLIGHTS_SEARCH
 } from './types';
 
 import moment from 'moment';
@@ -41,12 +41,14 @@ function _search(results, filters, isReturn) {
 
 /**
  * Initiates flight search with keywords.
- * @param  {String} input Keywords.
  * @return {Object}       Action.
  */
 export function searchFlights() {
   return async (dispatch, getState) => {
     const filters = getState().filters;
+    dispatch({
+      type: REQUEST_FLIGHTS_SEARCH
+    })
     const flights = await api.getFlights();
     const outFlights = _search(flights, filters, false);
 
