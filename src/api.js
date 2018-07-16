@@ -16,7 +16,7 @@ export async function getFlights() {
       return;
     }
     resolve(FLIGHTS);
-  }, 1));
+  }, 1000));
   return results;
 }
 
