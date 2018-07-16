@@ -11,7 +11,7 @@ This app is built on following technologies.
 - Mocha, Expect.js (Test suite)
 
 ## Installation
-Node 4+, NPM 3+ is highly recommended.
+Yarn is documented here, npm is ok too.
 ```
  $ yarn
 ```
@@ -20,7 +20,7 @@ Node 4+, NPM 3+ is highly recommended.
 ```
  $ yarn dev
 ```
-Go to [localhost:8080](http://localhost:8080).
+Go to [localhost:3000](http://localhost:3000).
 
 ## Tests
 Unit tests can be run with:
@@ -50,7 +50,7 @@ Cities are plain strings. Each flight is an object containing properties:
 - `arrival`: Arrival time, ISO 8601 Date String.
 - `price`: One way flight price.
 
-## Assumptions
+##Â Assumptions
 - Full names of airports includes relevant city name.
 - Two way price is equal to out flight price + return flight price.
 - No service fees are being charged.
