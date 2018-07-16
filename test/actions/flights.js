@@ -16,6 +16,9 @@ describe('Flights actions', () => {
   it('should create correct action for one way search', () => {
     let expectedActions = [
       {
+        type: types.REQUEST_FLIGHTS_SEARCH
+      },
+      {
         type: types.SEARCH_FLIGHTS,
         outFlights: [mockFlights[0]],
         passengers: 1
@@ -40,12 +43,16 @@ describe('Flights actions', () => {
       .then(() => { // return of async actions
         let actions = store.getActions();
         expect(actions[0]).toEqual(expectedActions[0]);
+        expect(actions[1]).toEqual(expectedActions[1]);
       });
   });
 
 
   it('should create correct action for roundtrip search', () => {
     let expectedActions = [
+      {
+        type: types.REQUEST_FLIGHTS_SEARCH
+      },
       {
         type: types.SEARCH_FLIGHTS,
         outFlights: [mockFlights[0]],
@@ -75,6 +82,7 @@ describe('Flights actions', () => {
       .then(() => { // return of async actions
         let actions = store.getActions();
         expect(actions[0]).toEqual(expectedActions[0]);
+        expect(actions[1]).toEqual(expectedActions[1]);
       });
   });
 });

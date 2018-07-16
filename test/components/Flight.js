@@ -11,8 +11,7 @@ import mockFlights from '../../src/flights_mock.json';
 
 function setup() {
   let props = {
-    out: mockFlights[0],
-    return: mockFlights[1],
+    ...mockFlights[0],
     passengers: 2
   };
 
@@ -32,16 +31,15 @@ describe('Flight component', () => {
     const { output, props } = setup();
 
     expect(TestUtils.isElementOfType(output, Card)).toBe(true);
-    expect(output.props.className).toBe('flight return');
+    expect(output.props.className).toBe('flight');
 
-    const [outDetails, returnDetails, price, actions] = output.props.children;
+    const [outDetails, price, actions] = output.props.children;
     expect(TestUtils.isElementOfType(outDetails, FlightDetails)).toBe(true);
-    expect(TestUtils.isElementOfType(returnDetails, FlightDetails)).toBe(true);
 
     expect(price.type).toBe('div');
     expect(price.props.className).toBe('price');
     expect(price.props.children.type).toBe('span');
-    expect(price.props.children.props.children).toEqual(['£', (props.out.price + props.return.price) * props.passengers]);
+    expect(price.props.children.props.children).toEqual(['£', props.price * props.passengers]);
 
     expect(actions.type).toBe('div');
     expect(actions.props.className).toBe('actions');
