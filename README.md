@@ -50,7 +50,7 @@ Cities are plain strings. Each flight is an object containing properties:
 - `arrival`: Arrival time, ISO 8601 Date String.
 - `price`: One way flight price.
 
-## Assumptions
+## Assumptions
 - Full names of airports includes relevant city name.
 - Two way price is equal to out flight price + return flight price.
 - No service fees are being charged.
