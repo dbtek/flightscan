@@ -55,7 +55,7 @@ export default (props) => {
         <div className="price">
           <input type="number" value={props.priceLow} placeholder="Low" onChange={handleChange('priceLow')} />
           <input type="number" value={props.priceHigh} placeholder="High" onChange={handleChange('priceHigh')} />
-          <RemoveIcon onClick={e => {
+          <RemoveIcon style={{ margin: 3}} onClick={e => {
             props.onChange('priceLow', '')
             props.onChange('priceHigh', '')
           }}/>
